@@ -54,3 +54,35 @@ Ensure:
 ### 4. Run the script
 ```bash
 python3 script.py
+```
+✅ **Keep the script running!**
+
+✅ **You can run it in the background:**
+```bash
+nohup python3 script.py &
+```
+## 🕰️ How the Timing Works
+- Runs **24/7**, waiting for **12:00 AM IST** each day.
+- Checks the time every **30 seconds**.
+- After committing at midnight, it waits **61 seconds** before checking again.
+
+## 🧰 Requirements
+- Python 3.x
+- Git installed and configured
+- An active internet connection (for `git push`)
+
+<!-- ## 🌐 Pro Tips
+Want this script to run **24/7** without keeping your laptop on?
+
+👉 Deploy it on a **VPS** (DigitalOcean, AWS EC2)  
+👉 OR use **GitHub Actions** for serverless automation (check the Actions example in this repo) -->
+
+## 📜 License
+MIT License. Use it, tweak it, automate your life.
+
+## ✨ Author
+👨‍💻 **Aliasgar Sogiawala**  
+
+Built for **automation lovers** and **GitHub streak warriors** 🔥  
+
+Feel free to connect!
