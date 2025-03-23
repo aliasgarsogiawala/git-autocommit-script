@@ -37,7 +37,8 @@ git-autocommit-script/
 
 ```bash
 git clone https://github.com/your-username/git-autocommit-script.git
-cd git-autocommit-script
+cd git-autocommit-script 
+``` 
 
 ### 2. Edit REPO_PATH (if needed)
 Inside `script.py`:
