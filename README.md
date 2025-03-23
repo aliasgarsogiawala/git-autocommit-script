@@ -36,7 +36,7 @@ git-autocommit-script/
 ### 1. Clone this repo or create your own
 
 ```bash
-git clone https://github.com/your-username/git-autocommit-script.git
+git clone https://github.com/aliasgarsogiawala/git-autocommit-script.git
 cd git-autocommit-script 
 ``` 
 
