@@ -18,7 +18,7 @@ def append_line():
 def git_commit_push():
     os.chdir(REPO_PATH)
 
-    subprocess.run(["git", "add", FILENAME], check=True)
+    subprocess.run(["git", "add", "."], check=True)
     commit_msg = f"Auto commit on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} IST"
     subprocess.run(["git", "commit", "-m", commit_msg], check=True)
     subprocess.run(["git", "push", "origin", "main"], check=True)
