@@ -1,0 +1,26 @@
+name: Auto Commit at 12AM IST
+
+on:
+  schedule:
+    - cron: '30 18 * * *'  # This runs at 12AM IST (6:30PM UTC)
+  workflow_dispatch:       # Optional: manually trigger from GitHub UI
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Add a line to commits.txt
+        run: |
+          echo "Commit made automatically on $(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M:%S IST')" >> commits.txt
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add commits.txt
+          git commit -m "🤖 Auto commit on $(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M:%S IST')" || echo "No changes to commit"
+          git push
