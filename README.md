@@ -1,4 +1,6 @@
 # 🚀 Git Auto Commit Script
+[![Auto Commit](https://github.com/aliasgarsogiawala/git-autocommit-script/actions/workflows/autocommit.yml/badge.svg)](https://github.com/aliasgarsogiawala/git-autocommit-script/actions/workflows/autocommit.yml)
+
 
 Automatically keep your GitHub streak alive—without lifting a finger!
 
