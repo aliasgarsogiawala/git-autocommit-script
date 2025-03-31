@@ -18,9 +18,11 @@ jobs:
           echo "Commit made automatically on $(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M:%S IST')" >> commits.txt
 
       - name: Commit and push changes
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add commits.txt
-          git commit -m "🤖 Auto commit on $(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M:%S IST')" || echo "No changes to commit"
-          git push
+          git commit -m "🤖 Auto commit on $(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M:%S IST')" || echo "Nothing to commit"
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }} HEAD:main
