@@ -1,4 +1,4 @@
-name: Auto Commit at 12AM IST
+name: Auto Commit at 10AM IST
 
 on:
   schedule:
